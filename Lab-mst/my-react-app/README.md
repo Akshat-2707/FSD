@@ -1,16 +1,91 @@
-# React + Vite
+# React User List App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple React application that fetches user data from an external API and displays it in a list.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Fetches data from API using `useEffect`
+- Stores data using `useState`
+- Displays user **Name** and **Email**
+- Simple and clean component structure
 
-## React Compiler
+## API Used
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+`https://jsonplaceholder.typicode.com/users`
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+src/
+ ├── components/
+ │    └── Users.jsx
+ ├── App.jsx
+ └── main.jsx
+How It Works
+
+The app starts from main.jsx
+
+App.jsx renders the Users component
+
+Users.jsx makes an API call when the component loads
+
+The fetched data is stored in state
+
+The user list is displayed using map()
+
+React Concepts Used
+
+useState – to store fetched user data
+
+useEffect – to call the API when the component loads
+
+Installation and Setup
+
+Clone the repository:
+
+git clone https://github.com/Akshat-2707/FSD.git
+
+Move into the project folder:
+
+cd FSD
+
+Install dependencies:
+
+npm install
+
+Start the development server:
+
+npm run dev
+Output
+
+The application displays:
+
+User Name
+
+User Email
+
+Possible Improvements
+
+Add loading state
+
+Add error handling
+
+Move API logic to a separate service file
+
+Improve UI styling
+
+Purpose
+
+This project is made for learning React basics such as:
+
+Component structure
+
+Hooks
+
+API fetching
+
+Dynamic rendering
+
+Author
+
+Akshat
